@@ -7,6 +7,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "https://schema.org/",
 
+
     "id": "vocab:modelId",
 
     "name": "rdfs:label",
@@ -107,13 +108,11 @@
 
     "defaultTags": {
       "@id": "vocab:defaultTags",
-      "@type": "@vocab",
-      "@container": "@set"
+      "@container": "@list"
     },
     "defaultRoles": {
       "@id": "vocab:defaultRoles",
-      "@type": "@vocab",
-      "@container": "@set"
+      "@container": "@list"
     },
 
     "maxUnauthorised": {
