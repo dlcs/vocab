@@ -1,1 +1,40 @@
-{}
+{
+  "@context": {
+    "@version": 1.1,
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "vocab": "https://dlcs.io/vocab#",
+
+    "EntryPoint": "vocab:EntryPoint",
+    "Image": "vocab:Image",
+
+
+    "customers": {
+      "@id": "vocab:customers",
+      "@type": "@id"
+    },
+    "originStrategies": {
+      "@id": "vocab:originStrategies",
+      "@type": "@id"
+    },
+    "portalRoles": {
+      "@id": "vocab:portalRoles",
+      "@type": "@id"
+    },
+    "imageOptimisationPolicies": {
+      "@id": "vocab:imageOptimisationPolicies",
+      "@type": "@id"
+    },
+    "thumbnailPolicies": {
+      "@id": "vocab:thumbnailPolicies",
+      "@type": "@id"
+    },
+    "storagePolicies": {
+      "@id": "vocab:storagePolicies",
+      "@type": "@id"
+    },
+    "queue": {
+      "@id": "vocab:queue",
+      "@type": "@id"
+    }
+  }
+}
