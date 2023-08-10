@@ -7,13 +7,15 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "https://schema.org/",
 
-    "name": "vocab:pathElement",
-    "displayName": "rdfs:label",
-    "created": {
-        "@id": "schema:dateCreated",
-        "@type": "xsd:dateTime"
-    },
+    "id": "vocab:modelId",
 
+    "name": "rdfs:label",
+    "displayName": "vocab:displayName",
+
+    "created": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
 
     "customers": {
       "@id": "vocab:customers",
@@ -53,60 +55,87 @@
       "@type": "@id"
     },
 
-
     "storage": {
-        "@id": "vocab:Customer/storage",
-        "@type": "@id"
-      },
+      "@id": "vocab:storage",
+      "@type": "@id"
+    },
+    "metadata": {
+      "@id": "vocab:metadata",
+      "@type": "@id"
+    },
 
     "portalUsers": {
-        "@id": "vocab:Customer/portalUsers",
-        "@type": "@id"
-      },
-      "namedQueries": {
-        "@id": "vocab:Customer/namedQueries",
-        "@type": "@id"
-      },
-      "authServices": {
-        "@id": "vocab:Customer/authServices",
-        "@type": "@id"
-      },
-      "roleProviders": {
-        "@id": "vocab:Customer/roleProviders",
-        "@type": "@id"
-      },
-      "roles": {
-        "@id": "vocab:Customer/roles",
-        "@type": "@id"
-      },
-      "spaces": {
-        "@id": "vocab:Customer/spaces",
-        "@type": "@id"
-      },
-      "allImages": {
-        "@id": "vocab:Customer/allImages",
-        "@type": "@id"
-      },
-      "keys": {
-        "@id": "vocab:Customer/keys",
-        "@type": "@id"
-      },
-      "customHeaders": {
-        "@id": "vocab:Customer/customHeaders",
-        "@type": "@id"
-      },
-      "administrator ": {
-        "@id": "vocab:Customer/administrator",
-        "@type": "xsd:boolean"
-      },
+      "@id": "vocab:Customer/portalUsers",
+      "@type": "@id"
+    },
+    "namedQueries": {
+      "@id": "vocab:Customer/namedQueries",
+      "@type": "@id"
+    },
+    "authServices": {
+      "@id": "vocab:Customer/authServices",
+      "@type": "@id"
+    },
+    "roleProviders": {
+      "@id": "vocab:Customer/roleProviders",
+      "@type": "@id"
+    },
+    "roles": {
+      "@id": "vocab:Customer/roles",
+      "@type": "@id"
+    },
+    "spaces": {
+      "@id": "vocab:Customer/spaces",
+      "@type": "@id"
+    },
+    "allImages": {
+      "@id": "vocab:Customer/allImages",
+      "@type": "@id"
+    },
+    "keys": {
+      "@id": "vocab:Customer/keys",
+      "@type": "@id"
+    },
+    "customHeaders": {
+      "@id": "vocab:Customer/customHeaders",
+      "@type": "@id"
+    },
+    "administrator ": {
+      "@id": "vocab:Customer/administrator",
+      "@type": "xsd:boolean"
+    },
 
+    "defaultTags": {
+      "@id": "vocab:defaultTags",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+    "defaultRoles": {
+      "@id": "vocab:defaultRoles",
+      "@type": "@vocab",
+      "@container": "@set"
+    },
+
+    "maxUnauthorised": {
+      "@id": "vocab:maxUnauthorised",
+      "@type": "xsd:integer"
+    },
+    "approximateNumberOfImages": {
+      "@id": "vocab:approximateNumberOfImages",
+      "@type": "xsd:integer"
+    },
+
+    "images": {
+      "@id": "vocab:Space/images",
+      "@type": "@id"
+    },
 
     "ApiKey": {
-        "@id": "vocab:ApiKey",
-        "@context": {
-            "key": "vocab:ApiKey/key",
-            "secret": "vocab:ApiKey/secret"
-        }
+      "@id": "vocab:ApiKey",
+      "@context": {
+        "key": "vocab:ApiKey/key",
+        "secret": "vocab:ApiKey/secret"
+      }
     }
   }
 }
