@@ -3,9 +3,16 @@
     "@version": 1.1,
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "vocab": "https://dlcs.io/vocab#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
 
-    "EntryPoint": "vocab:EntryPoint",
-    "Image": "vocab:Image",
+    "name": "vocab:pathElement",
+    "displayName": "rdfs:label",
+    "created": {
+        "@id": "schema:dateCreated",
+        "@type": "xsd:dateTime"
+    },
 
 
     "customers": {
@@ -28,6 +35,15 @@
       "@id": "vocab:thumbnailPolicies",
       "@type": "@id"
     },
+    "avPolicies": {
+      "@id": "vocab:avPolicies",
+      "@type": "@id"
+    },
+    "filePolicies": {
+      "@id": "vocab:filePolicies",
+      "@type": "@id"
+    },
+
     "storagePolicies": {
       "@id": "vocab:storagePolicies",
       "@type": "@id"
@@ -35,6 +51,62 @@
     "queue": {
       "@id": "vocab:queue",
       "@type": "@id"
+    },
+
+
+    "storage": {
+        "@id": "vocab:Customer/storage",
+        "@type": "@id"
+      },
+
+    "portalUsers": {
+        "@id": "vocab:Customer/portalUsers",
+        "@type": "@id"
+      },
+      "namedQueries": {
+        "@id": "vocab:Customer/namedQueries",
+        "@type": "@id"
+      },
+      "authServices": {
+        "@id": "vocab:Customer/authServices",
+        "@type": "@id"
+      },
+      "roleProviders": {
+        "@id": "vocab:Customer/roleProviders",
+        "@type": "@id"
+      },
+      "roles": {
+        "@id": "vocab:Customer/roles",
+        "@type": "@id"
+      },
+      "spaces": {
+        "@id": "vocab:Customer/spaces",
+        "@type": "@id"
+      },
+      "allImages": {
+        "@id": "vocab:Customer/allImages",
+        "@type": "@id"
+      },
+      "keys": {
+        "@id": "vocab:Customer/keys",
+        "@type": "@id"
+      },
+      "customHeaders": {
+        "@id": "vocab:Customer/customHeaders",
+        "@type": "@id"
+      },
+      "administrator ": {
+        "@id": "vocab:Customer/administrator",
+        "@type": "xsd:boolean"
+      },
+
+
+    "ApiKey": {
+        "@id": "vocab:ApiKey",
+        "@context": {
+            "key": "vocab:ApiKey/key",
+            "secret": "vocab:ApiKey/secret"
+        }
     }
   }
 }
