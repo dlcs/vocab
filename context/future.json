@@ -11,7 +11,7 @@
     "id": "vocab:modelId",
     "name": "rdfs:label",
     "displayName": "schema:description",
-    
+
     "created": {
       "@id": "schema:dateCreated",
       "@type": "xsd:dateTime"
@@ -42,7 +42,6 @@
       "@id": "vocab:roles",
       "@container": "@list"
     },
-
 
     "customers": {
       "@id": "vocab:customers",
