@@ -9,9 +9,14 @@
     "dcterms": "http://purl.org/dc/terms/",
 
     "id": "vocab:modelId",
-
     "name": "rdfs:label",
     "displayName": "schema:description",
+    
+    "created": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+
     "mediaType": "schema:encodingFormat",
 
     "profile": {
@@ -38,10 +43,6 @@
       "@container": "@list"
     },
 
-    "created": {
-      "@id": "schema:dateCreated",
-      "@type": "xsd:dateTime"
-    },
 
     "customers": {
       "@id": "vocab:customers",
@@ -143,8 +144,18 @@
 
     "vocab:Image": {
       "@context": {
-        "imageService": "vocab:imageService",
-        "thumbnailImageService": "vocab:thumbnailImageService",
+        "space": {
+          "@id": "vocab:Image/space",
+          "@type": "xsd:integer"
+        },
+        "imageService": {
+          "@id": "vocab:Image/imageService",
+          "@type": "@id"
+        },
+        "thumbnailImageService": {
+          "@id": "vocab:Image/thumbnailImageService",
+          "@type": "@id"
+        },
         "origin": {
           "@id": "vocab:Image/origin",
           "@type": "@id"
@@ -175,7 +186,10 @@
         "number1": "vocab:Image/number1",
         "number2": "vocab:Image/number2",
         "number3": "vocab:Image/number3",
-        "duration": "vocab:Image/duration",
+        "duration": {
+          "@id": "vocab:Image/duration",
+          "@type": "xsd:decimal"
+        },
         "width": {
           "@id": "vocab:Image/width",
           "@type": "xsd:integer"
