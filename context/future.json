@@ -7,6 +7,8 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "https://schema.org/",
     "dcterms": "http://purl.org/dc/terms/",
+    "exif": "http://www.w3.org/2003/12/exif/ns#",
+    "ebu": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
 
     "id": "vocab:modelId",
     "name": "rdfs:label",
@@ -185,17 +187,16 @@
         "number1": "vocab:Image/number1",
         "number2": "vocab:Image/number2",
         "number3": "vocab:Image/number3",
-        "duration": {
-          "@id": "vocab:Image/duration",
-          "@type": "xsd:decimal"
-        },
         "width": {
-          "@id": "vocab:Image/width",
+          "@id": "exif:width",
           "@type": "xsd:integer"
         },
         "height": {
-          "@id": "vocab:Image/height",
+          "@id": "exif:height",
           "@type": "xsd:integer"
+        },
+        "duration": {
+          "@id": "ebu:duration"
         },
         "deliveryChannels": {
           "@id": "vocab:Image/deliveryChannels",
