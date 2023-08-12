@@ -6,7 +6,6 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "https://schema.org/",
-    "dcterms": "http://purl.org/dc/terms/",
     "exif": "http://www.w3.org/2003/12/exif/ns#",
     "ebu": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
 
@@ -21,11 +20,6 @@
 
     "mediaType": "schema:encodingFormat",
 
-    "profile": {
-      "@type": "@vocab",
-      "@id": "dcterms:conformsTo"
-    },
-
     "error": "vocab:error",
 
     "defaultTags": {
@@ -34,7 +28,8 @@
     },
     "defaultRoles": {
       "@id": "vocab:defaultRoles",
-      "@container": "@list"
+      "@container": "@list",
+      "@type": "@id"
     },
     "tags": {
       "@id": "vocab:tags",
@@ -42,7 +37,8 @@
     },
     "roles": {
       "@id": "vocab:roles",
-      "@container": "@list"
+      "@container": "@list",
+      "@type": "@id"
     },
 
     "customers": {
@@ -57,20 +53,9 @@
       "@id": "vocab:portalRoles",
       "@type": "@id"
     },
-    "imageOptimisationPolicies": {
-      "@id": "vocab:imageOptimisationPolicies",
-      "@type": "@id"
-    },
-    "thumbnailPolicies": {
-      "@id": "vocab:thumbnailPolicies",
-      "@type": "@id"
-    },
-    "avPolicies": {
-      "@id": "vocab:avPolicies",
-      "@type": "@id"
-    },
-    "filePolicies": {
-      "@id": "vocab:filePolicies",
+
+    "deliveryChannelPolicies": {
+      "@id": "vocab:deliveryChannelPolicies",
       "@type": "@id"
     },
 
@@ -221,12 +206,26 @@
         },
 
         "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
-        "thumbnails": "vocab:DeliveryChannel/channels/thumbnails",
+        "thumbnail": "vocab:DeliveryChannel/channels/thumbnail",
         "iiif-av": "vocab:DeliveryChannel/channels/iiif-av",
         "file": "vocab:DeliveryChannel/channels/file",
 
         "none": "vocab:DeliveryChannel/policies/none",
         "use-original": "vocab:DeliveryChannel/policies/use-original"
+      }
+    },
+
+    "vocab:DeliveryChannelPolicy": {
+      "@context": {
+        "channel": {
+          "@id": "vocab:DeliveryChannel/channel",
+          "@type": "@vocab"
+        },
+        "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
+        "thumbnail": "vocab:DeliveryChannel/channels/thumbnail",
+        "iiif-av": "vocab:DeliveryChannel/channels/iiif-av",
+        "file": "vocab:DeliveryChannel/channels/file",
+        "policyData": "vocab:DeliveryChannelPolicy/policyData"
       }
     },
 
