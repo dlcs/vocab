@@ -217,7 +217,7 @@
         },
         "policy": {
           "@id": "vocab:DeliveryChannel/policy",
-          "@type": "@id"
+          "@type": "@vocab"
         },
 
         "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
