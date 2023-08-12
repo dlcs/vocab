@@ -209,7 +209,6 @@
       }
     },
 
-      
     "vocab:DeliveryChannel": {
       "@context": {
         "channel": {
@@ -220,7 +219,7 @@
           "@id": "vocab:DeliveryChannel/policy",
           "@type": "@id"
         },
-        
+
         "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
         "thumbnails": "vocab:DeliveryChannel/channels/thumbnails",
         "iiif-av": "vocab:DeliveryChannel/channels/iiif-av",
