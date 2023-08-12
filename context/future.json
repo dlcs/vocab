@@ -209,12 +209,25 @@
       }
     },
 
-    "vocab:DeliveryChannels": {
+      
+    "vocab:DeliveryChannel": {
       "@context": {
+        "channel": {
+          "@id": "vocab:DeliveryChannel/channel",
+          "@type": "@vocab"
+        },
         "policy": {
-          "@id": "vocab:DeliveryChannels/policy",
+          "@id": "vocab:DeliveryChannel/policy",
           "@type": "@id"
-        }
+        },
+        
+        "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
+        "thumbnails": "vocab:DeliveryChannel/channels/thumbnails",
+        "iiif-av": "vocab:DeliveryChannel/channels/iiif-av",
+        "file": "vocab:DeliveryChannel/channels/file",
+
+        "none": "vocab:DeliveryChannel/policies/none",
+        "use-original": "vocab:DeliveryChannel/policies/use-original"
       }
     },
 
