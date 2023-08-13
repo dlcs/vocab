@@ -8,17 +8,38 @@
     "schema": "https://schema.org/",
     "exif": "http://www.w3.org/2003/12/exif/ns#",
     "ebu": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dctypes": "http://purl.org/dc/dcmitype/",
 
     "id": "vocab:modelId",
     "name": "rdfs:label",
     "displayName": "schema:description",
+
+    "origin": {
+      "@id": "dc:source",
+      "@type": "@id"
+    },
 
     "created": {
       "@id": "schema:dateCreated",
       "@type": "xsd:dateTime"
     },
 
-    "mediaType": "schema:encodingFormat",
+    "profile": {
+      "@id": "dcterms:conformsTo",
+      "@type": "@vocab"
+    },
+
+    "mediaType": "dc:format",
+
+    "Dataset": "dctypes:Dataset",
+    "Image": "dctypes:StillImage",
+    "Video": "dctypes:MovingImage",
+    "Audio": "dctypes:Sound",
+    "Text": "dctypes:Text",
+    "3DModel": "schema:3DModel",
+    "Service": "schema:WebAPI",
 
     "error": "vocab:error",
 
@@ -140,10 +161,6 @@
         },
         "thumbnailImageService": {
           "@id": "vocab:Image/thumbnailImageService",
-          "@type": "@id"
-        },
-        "origin": {
-          "@id": "vocab:Image/origin",
           "@type": "@id"
         },
         "initialOrigin": {
