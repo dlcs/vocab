@@ -15,6 +15,13 @@
     "id": "vocab:modelId",
     "name": "rdfs:label",
     "displayName": "schema:description",
+    "label": {
+      "@id": "rdfs:label",
+      "@container": ["@language", "@set"],
+      "@context": {
+        "none": "@none"
+      }
+    },   
 
     "origin": {
       "@id": "dc:source",
@@ -25,6 +32,7 @@
       "@id": "schema:dateCreated",
       "@type": "xsd:dateTime"
     },
+    "creator": "dcterms:creator",
 
     "profile": {
       "@id": "dcterms:conformsTo",
@@ -40,6 +48,24 @@
     "Text": "dctypes:Text",
     "3DModel": "schema:3DModel",
     "Service": "schema:WebAPI",
+    "AnnotationPage": {
+      "@id": "as:OrderedCollectionPage",
+      "@context": [
+        "http://www.w3.org/ns/anno.jsonld",
+        {
+          "label": {
+            "@id": "rdfs:label",
+            "@container": ["@language", "@set"],
+            "@context": {
+              "none": "@none"
+            }
+          }          
+        }
+      ]
+    },
+
+    "manifest": "vocab:iiif_manifest",
+    "contentUrl": "schema:contentUrl",
 
     "error": "vocab:error",
 
