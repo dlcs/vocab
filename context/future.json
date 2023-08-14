@@ -1,288 +1,290 @@
 {
-  "@context": {
-    "@version": 1.1,
-    "hydra": "http://www.w3.org/ns/hydra/core#",
-    "vocab": "https://dlcs.io/vocab#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "schema": "https://schema.org/",
-    "exif": "http://www.w3.org/2003/12/exif/ns#",
-    "ebu": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "dcterms": "http://purl.org/dc/terms/",
-    "dctypes": "http://purl.org/dc/dcmitype/",
+  "@context": [
+    "http://www.w3.org/ns/hydra/core#",
+    {
+      "@version": 1.1,
+      "vocab": "https://dlcs.io/vocab#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "schema": "https://schema.org/",
+      "exif": "http://www.w3.org/2003/12/exif/ns#",
+      "ebu": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "dctypes": "http://purl.org/dc/dcmitype/",
 
-    "id": "vocab:modelId",
-    "name": "rdfs:label",
-    "displayName": "schema:description",
-    "label": {
-      "@id": "rdfs:label",
-      "@container": ["@language", "@set"],
-      "@context": {
-        "none": "@none"
-      }
-    },   
+      "id": "vocab:modelId",
+      "name": "rdfs:label",
+      "displayName": "schema:description",
+      "label": {
+        "@id": "rdfs:label",
+        "@container": ["@language", "@set"],
+        "@context": {
+          "none": "@none"
+        }
+      },
 
-    "origin": {
-      "@id": "dc:source",
-      "@type": "@id"
-    },
+      "origin": {
+        "@id": "dc:source",
+        "@type": "@id"
+      },
 
-    "created": {
-      "@id": "schema:dateCreated",
-      "@type": "xsd:dateTime"
-    },
-    "creator": "dcterms:creator",
+      "created": {
+        "@id": "schema:dateCreated",
+        "@type": "xsd:dateTime"
+      },
+      "creator": "dcterms:creator",
 
-    "profile": {
-      "@id": "dcterms:conformsTo",
-      "@type": "@vocab"
-    },
+      "profile": {
+        "@id": "dcterms:conformsTo",
+        "@type": "@vocab"
+      },
 
-    "mediaType": "dc:format",
+      "mediaType": "dc:format",
 
-    "Dataset": "dctypes:Dataset",
-    "Image": "dctypes:StillImage",
-    "Video": "dctypes:MovingImage",
-    "Audio": "dctypes:Sound",
-    "Text": "dctypes:Text",
-    "3DModel": "schema:3DModel",
-    "Service": "schema:WebAPI",
-    "AnnotationPage": {
-      "@id": "as:OrderedCollectionPage",
-      "@context": [
-        "http://www.w3.org/ns/anno.jsonld",
-        {
-          "label": {
-            "@id": "rdfs:label",
-            "@container": ["@language", "@set"],
-            "@context": {
-              "none": "@none"
+      "Dataset": "dctypes:Dataset",
+      "Image": "dctypes:StillImage",
+      "Video": "dctypes:MovingImage",
+      "Audio": "dctypes:Sound",
+      "Text": "dctypes:Text",
+      "3DModel": "schema:3DModel",
+      "Service": "schema:WebAPI",
+      "AnnotationPage": {
+        "@id": "as:OrderedCollectionPage",
+        "@context": [
+          "http://www.w3.org/ns/anno.jsonld",
+          {
+            "label": {
+              "@id": "rdfs:label",
+              "@container": ["@language", "@set"],
+              "@context": {
+                "none": "@none"
+              }
             }
-          }          
+          }
+        ]
+      },
+
+      "manifest": "vocab:iiif_manifest",
+      "contentUrl": "schema:contentUrl",
+
+      "error": "vocab:error",
+
+      "defaultTags": {
+        "@id": "vocab:defaultTags",
+        "@container": "@list"
+      },
+      "defaultRoles": {
+        "@id": "vocab:defaultRoles",
+        "@container": "@list",
+        "@type": "@id"
+      },
+      "tags": {
+        "@id": "vocab:tags",
+        "@container": "@list"
+      },
+      "roles": {
+        "@id": "vocab:roles",
+        "@container": "@list",
+        "@type": "@id"
+      },
+
+      "customers": {
+        "@id": "vocab:customers",
+        "@type": "@id"
+      },
+      "originStrategies": {
+        "@id": "vocab:originStrategies",
+        "@type": "@id"
+      },
+      "portalRoles": {
+        "@id": "vocab:portalRoles",
+        "@type": "@id"
+      },
+
+      "deliveryChannelPolicies": {
+        "@id": "vocab:deliveryChannelPolicies",
+        "@type": "@id"
+      },
+
+      "storagePolicies": {
+        "@id": "vocab:storagePolicies",
+        "@type": "@id"
+      },
+      "queue": {
+        "@id": "vocab:queue",
+        "@type": "@id"
+      },
+
+      "storage": {
+        "@id": "vocab:storage",
+        "@type": "@id"
+      },
+      "metadata": {
+        "@id": "vocab:metadata",
+        "@type": "@id"
+      },
+
+      "portalUsers": {
+        "@id": "vocab:Customer/portalUsers",
+        "@type": "@id"
+      },
+      "namedQueries": {
+        "@id": "vocab:Customer/namedQueries",
+        "@type": "@id"
+      },
+      "authServices": {
+        "@id": "vocab:Customer/authServices",
+        "@type": "@id"
+      },
+      "roleProviders": {
+        "@id": "vocab:Customer/roleProviders",
+        "@type": "@id"
+      },
+      "spaces": {
+        "@id": "vocab:Customer/spaces",
+        "@type": "@id"
+      },
+      "allImages": {
+        "@id": "vocab:Customer/allImages",
+        "@type": "@id"
+      },
+      "keys": {
+        "@id": "vocab:Customer/keys",
+        "@type": "@id"
+      },
+      "customHeaders": {
+        "@id": "vocab:Customer/customHeaders",
+        "@type": "@id"
+      },
+      "administrator ": {
+        "@id": "vocab:Customer/administrator",
+        "@type": "xsd:boolean"
+      },
+
+      "maxUnauthorised": {
+        "@id": "vocab:maxUnauthorised",
+        "@type": "xsd:integer"
+      },
+      "approximateNumberOfImages": {
+        "@id": "vocab:approximateNumberOfImages",
+        "@type": "xsd:integer"
+      },
+
+      "images": {
+        "@id": "vocab:Space/images",
+        "@type": "@id"
+      },
+
+      "vocab:Image": {
+        "@context": {
+          "space": {
+            "@id": "vocab:Image/space",
+            "@type": "xsd:integer"
+          },
+          "imageService": {
+            "@id": "vocab:Image/imageService",
+            "@type": "@id"
+          },
+          "thumbnailImageService": {
+            "@id": "vocab:Image/thumbnailImageService",
+            "@type": "@id"
+          },
+          "initialOrigin": {
+            "@id": "vocab:Image/initialOrigin",
+            "@type": "@id"
+          },
+          "queued": {
+            "@id": "vocab:Image/queued",
+            "@type": "xsd:dateTime"
+          },
+          "dequeued": {
+            "@id": "vocab:Image/dequeued",
+            "@type": "xsd:dateTime"
+          },
+          "finished": {
+            "@id": "vocab:Image/finished",
+            "@type": "xsd:dateTime"
+          },
+          "ingesting ": {
+            "@id": "vocab:Image/ingesting",
+            "@type": "xsd:boolean"
+          },
+          "string1": "vocab:Image/string1",
+          "string2": "vocab:Image/string2",
+          "string3": "vocab:Image/string3",
+          "number1": "vocab:Image/number1",
+          "number2": "vocab:Image/number2",
+          "number3": "vocab:Image/number3",
+          "width": {
+            "@id": "exif:width",
+            "@type": "xsd:integer"
+          },
+          "height": {
+            "@id": "exif:height",
+            "@type": "xsd:integer"
+          },
+          "duration": {
+            "@id": "ebu:duration"
+          },
+          "deliveryChannels": {
+            "@id": "vocab:Image/deliveryChannels",
+            "@container": "@list"
+          },
+          "batch": {
+            "@id": "vocab:Image/batch",
+            "@type": "@id"
+          }
         }
-      ]
-    },
+      },
 
-    "manifest": "vocab:iiif_manifest",
-    "contentUrl": "schema:contentUrl",
+      "vocab:DeliveryChannel": {
+        "@context": {
+          "channel": {
+            "@id": "vocab:DeliveryChannel/channel",
+            "@type": "@vocab"
+          },
+          "policy": {
+            "@id": "vocab:DeliveryChannel/policy",
+            "@type": "@vocab"
+          },
 
-    "error": "vocab:error",
+          "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
+          "thumbnail": "vocab:DeliveryChannel/channels/thumbnail",
+          "iiif-av": "vocab:DeliveryChannel/channels/iiif-av",
+          "file": "vocab:DeliveryChannel/channels/file",
 
-    "defaultTags": {
-      "@id": "vocab:defaultTags",
-      "@container": "@list"
-    },
-    "defaultRoles": {
-      "@id": "vocab:defaultRoles",
-      "@container": "@list",
-      "@type": "@id"
-    },
-    "tags": {
-      "@id": "vocab:tags",
-      "@container": "@list"
-    },
-    "roles": {
-      "@id": "vocab:roles",
-      "@container": "@list",
-      "@type": "@id"
-    },
-
-    "customers": {
-      "@id": "vocab:customers",
-      "@type": "@id"
-    },
-    "originStrategies": {
-      "@id": "vocab:originStrategies",
-      "@type": "@id"
-    },
-    "portalRoles": {
-      "@id": "vocab:portalRoles",
-      "@type": "@id"
-    },
-
-    "deliveryChannelPolicies": {
-      "@id": "vocab:deliveryChannelPolicies",
-      "@type": "@id"
-    },
-
-    "storagePolicies": {
-      "@id": "vocab:storagePolicies",
-      "@type": "@id"
-    },
-    "queue": {
-      "@id": "vocab:queue",
-      "@type": "@id"
-    },
-
-    "storage": {
-      "@id": "vocab:storage",
-      "@type": "@id"
-    },
-    "metadata": {
-      "@id": "vocab:metadata",
-      "@type": "@id"
-    },
-
-    "portalUsers": {
-      "@id": "vocab:Customer/portalUsers",
-      "@type": "@id"
-    },
-    "namedQueries": {
-      "@id": "vocab:Customer/namedQueries",
-      "@type": "@id"
-    },
-    "authServices": {
-      "@id": "vocab:Customer/authServices",
-      "@type": "@id"
-    },
-    "roleProviders": {
-      "@id": "vocab:Customer/roleProviders",
-      "@type": "@id"
-    },
-    "spaces": {
-      "@id": "vocab:Customer/spaces",
-      "@type": "@id"
-    },
-    "allImages": {
-      "@id": "vocab:Customer/allImages",
-      "@type": "@id"
-    },
-    "keys": {
-      "@id": "vocab:Customer/keys",
-      "@type": "@id"
-    },
-    "customHeaders": {
-      "@id": "vocab:Customer/customHeaders",
-      "@type": "@id"
-    },
-    "administrator ": {
-      "@id": "vocab:Customer/administrator",
-      "@type": "xsd:boolean"
-    },
-
-    "maxUnauthorised": {
-      "@id": "vocab:maxUnauthorised",
-      "@type": "xsd:integer"
-    },
-    "approximateNumberOfImages": {
-      "@id": "vocab:approximateNumberOfImages",
-      "@type": "xsd:integer"
-    },
-
-    "images": {
-      "@id": "vocab:Space/images",
-      "@type": "@id"
-    },
-
-    "vocab:Image": {
-      "@context": {
-        "space": {
-          "@id": "vocab:Image/space",
-          "@type": "xsd:integer"
-        },
-        "imageService": {
-          "@id": "vocab:Image/imageService",
-          "@type": "@id"
-        },
-        "thumbnailImageService": {
-          "@id": "vocab:Image/thumbnailImageService",
-          "@type": "@id"
-        },
-        "initialOrigin": {
-          "@id": "vocab:Image/initialOrigin",
-          "@type": "@id"
-        },
-        "queued": {
-          "@id": "vocab:Image/queued",
-          "@type": "xsd:dateTime"
-        },
-        "dequeued": {
-          "@id": "vocab:Image/dequeued",
-          "@type": "xsd:dateTime"
-        },
-        "finished": {
-          "@id": "vocab:Image/finished",
-          "@type": "xsd:dateTime"
-        },
-        "ingesting ": {
-          "@id": "vocab:Image/ingesting",
-          "@type": "xsd:boolean"
-        },
-        "string1": "vocab:Image/string1",
-        "string2": "vocab:Image/string2",
-        "string3": "vocab:Image/string3",
-        "number1": "vocab:Image/number1",
-        "number2": "vocab:Image/number2",
-        "number3": "vocab:Image/number3",
-        "width": {
-          "@id": "exif:width",
-          "@type": "xsd:integer"
-        },
-        "height": {
-          "@id": "exif:height",
-          "@type": "xsd:integer"
-        },
-        "duration": {
-          "@id": "ebu:duration"
-        },
-        "deliveryChannels": {
-          "@id": "vocab:Image/deliveryChannels",
-          "@container": "@list"
-        },
-        "batch": {
-          "@id": "vocab:Image/batch",
-          "@type": "@id"
+          "none": "vocab:DeliveryChannel/policies/none",
+          "use-original": "vocab:DeliveryChannel/policies/use-original"
         }
-      }
-    },
+      },
 
-    "vocab:DeliveryChannel": {
-      "@context": {
-        "channel": {
-          "@id": "vocab:DeliveryChannel/channel",
-          "@type": "@vocab"
-        },
-        "policy": {
-          "@id": "vocab:DeliveryChannel/policy",
-          "@type": "@vocab"
-        },
+      "vocab:DeliveryChannelPolicy": {
+        "@context": {
+          "channel": {
+            "@id": "vocab:DeliveryChannel/channel",
+            "@type": "@vocab"
+          },
+          "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
+          "thumbnail": "vocab:DeliveryChannel/channels/thumbnail",
+          "iiif-av": "vocab:DeliveryChannel/channels/iiif-av",
+          "file": "vocab:DeliveryChannel/channels/file",
+          "policyData": "vocab:DeliveryChannelPolicy/policyData"
+        }
+      },
 
-        "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
-        "thumbnail": "vocab:DeliveryChannel/channels/thumbnail",
-        "iiif-av": "vocab:DeliveryChannel/channels/iiif-av",
-        "file": "vocab:DeliveryChannel/channels/file",
+      "adjuncts": {
+        "@id": "vocab:adjuncts",
+        "@type": "@id"
+      },
 
-        "none": "vocab:DeliveryChannel/policies/none",
-        "use-original": "vocab:DeliveryChannel/policies/use-original"
-      }
-    },
-
-    "vocab:DeliveryChannelPolicy": {
-      "@context": {
-        "channel": {
-          "@id": "vocab:DeliveryChannel/channel",
-          "@type": "@vocab"
-        },
-        "iiif-img": "vocab:DeliveryChannel/channels/iiif-img",
-        "thumbnail": "vocab:DeliveryChannel/channels/thumbnail",
-        "iiif-av": "vocab:DeliveryChannel/channels/iiif-av",
-        "file": "vocab:DeliveryChannel/channels/file",
-        "policyData": "vocab:DeliveryChannelPolicy/policyData"
-      }
-    },
-
-    "adjuncts": {
-      "@id": "vocab:adjuncts",
-      "@type": "@id"
-    },
-
-    "ApiKey": {
-      "@id": "vocab:ApiKey",
-      "@context": {
-        "key": "vocab:ApiKey/key",
-        "secret": "vocab:ApiKey/secret"
+      "ApiKey": {
+        "@id": "vocab:ApiKey",
+        "@context": {
+          "key": "vocab:ApiKey/key",
+          "secret": "vocab:ApiKey/secret"
+        }
       }
     }
-  }
+  ]
 }
