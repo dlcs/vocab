@@ -23,6 +23,11 @@
         "@context": {
           "none": "@none"
         }
+      },  
+
+      "pageSize":{
+        "@id": "vocab:collection/pageSize",
+        "@type": "xsd:integer"
       },
 
       "origin": {
