@@ -112,7 +112,10 @@
         "@id": "vocab:deliveryChannelPolicies",
         "@type": "@id"
       },
-
+      "defaultDeliveryChannels": {
+        "@id": "vocab:defaultDeliveryChannels",
+        "@type": "@id"
+      },
       "storagePolicies": {
         "@id": "vocab:storagePolicies",
         "@type": "@id"
@@ -261,6 +264,7 @@
           "file": "vocab:DeliveryChannel/channels/file",
 
           "none": "vocab:DeliveryChannel/policies/none",
+          "default": "vocab:DeliveryChannel/policies/default",
           "use-original": "vocab:DeliveryChannel/policies/use-original"
         }
       },
@@ -278,6 +282,31 @@
           "file": "vocab:DeliveryChannel/channels/file",
 
           "policyData": "vocab:DeliveryChannelPolicy/policyData"
+        }
+      },
+
+      "vocab:CustomerOriginStrategy": {
+        "@context": {
+          "strategy": {
+            "@id": "vocab:CustomerOriginStrategy/strategy",
+            "@type": "@vocab"
+          },
+          "regex": {
+            "@id": "vocab:CustomerOriginStrategy/regex",
+            "@type": "xsd:string"
+          },
+          "credentials": {
+            "@id": "vocab:CustomerOriginStrategy/credentials",
+            "@type": "xsd:string"
+          },
+          "optimised": {
+            "@id": "vocab:CustomerOriginStrategy/optimised",
+            "@type": "xsd:boolean"
+          },
+          "order": {
+            "@id": "vocab:CustomerOriginStrategy/order",
+            "@type": "xsd:integer"
+          }
         }
       },
 
