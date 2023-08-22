@@ -321,6 +321,21 @@
           "key": "vocab:ApiKey/key",
           "secret": "vocab:ApiKey/secret"
         }
+      },
+
+      "vocab:CustomHeader": {
+        "@context": {
+          "key": "vocab:ApiKey/key",
+          "value": "vocab:ApiKey/secret",
+          "space": {
+            "@id": "vocab:CustomHeader/space",
+            "@type": "xsd:integer"
+          },
+          "role": {
+            "@id": "vocab:CustomHeader/role",
+            "@type": "@vocab"
+          }
+        }
       }
     }
   ]
